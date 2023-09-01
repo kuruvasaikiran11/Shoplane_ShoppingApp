@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping App</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://kit.fontawesome.com/9a7165a460.js" crossorigin="anonymous"></script>
     <script
@@ -18,10 +19,10 @@
         <nav id="topbar">
             <div id="left-menu">
                 <div id="logo">
-                    <a href="homepage.html"><span>Shop</span>lane</a>
+                    <a href="../index.html"><span>Shop</span>lane</a>
                 </div>
-                <a href="#clothing-section">Clothing</a>
-                <a href="#accessory-section">Accessories</a>
+                <a href="../index.html#clothing-section">Clothing</a>
+                <a href="../index.html#accessory-section">Accessories</a>
             </div>
             <div id="search-wrapper">
                 <i class="fas fa-search"></i>
@@ -30,7 +31,7 @@
             <div id="right-menu">
                 <div id="cart-wrapper">
                     <p id="cart-count">0</p>
-                    <a href="checkout/checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <i class="fa fa-user-circle-o"></i>
             </div>
@@ -38,44 +39,33 @@
     </header>
 
     <main>
-        <!-- Carousel -->
-        <section>
-            <div class="center">
-                <img src="https://imgur.com/96OnkX7.png" />
-                <img src="https://imgur.com/KtGxwnN.png" />
-                <img src="https://imgur.com/sfjg9R8.png" />
-                <img src="https://imgur.com/p0wdadG.png" />
-            </div>
-        </section>
-        
-        <section id="clothing-section" class="homepage-section">
-            <h3 class="section-heading">
-                Clothing for Men and Women
-            </h3>
+        <section id="section">
+            <h1 id="main-heading">Checkout</h1>
+            <div id="content-wrapper">
+                <div id="item-list">
+                    <h3 class="section-heading">
+                        Total Items: <span>0</span>
+                    </h3>
+                    <!-- <div class="item-card">
+                        <div>
+                            <img class="checkout-product-img" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2060340/2017/9/14/11505387708574-Puma-Men-Black-Solid-Sporty-Jacket-371505387708496-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <h4>Men Black MAMGP T7 Sweat Sporty Jacket</h4>
+                            <p>x1</p>
+                            <p><span>Amount: Rs </span><span>7999</span> </p>
+                            <button id="btn-remove">Remove</button>
+                        </div>
+                    </div> -->
+                </div>
 
-            <div class="product" id="clothing">
-                <!-- <div class="product-card">
-                    <a href="">
-                        <img class="product-img" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="">
-                    </a>
-                    <div class="product-details">
-                        <h4>Men Navy Blue Solid Sweatshirt</h4>
-                        <h5>United Colors of Benetton</h5>
-                        <p>Rs 2599</p>
-                    </div>
-                </div> -->
+                <div id="total-card">
+                    <h3 class="section-heading">Total Amount</h3>
+                    <p>Amount: Rs <span id="total-amt">0</span></p>
+                    <button id="btn-order">Place Order</button>
+                </div>
             </div>
         </section>
-
-        <section id="accessory-section" class="homepage-section">
-            <h3 class="section-heading">
-                Accessories for Men and Women
-            </h3>
-            <div class="product" id="accessory">
-                
-            </div>
-        </section>
-        
     </main>
 
     <footer>
@@ -108,8 +98,8 @@
             <p class="footer-link">UNITED STATES</p>
         </div>
     </footer>
-    <script src="index.js"></script>
-    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+    <script src="../cart.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>
