@@ -1,5 +1,6 @@
+
 $(document).ready(function(){
-    // Corousel
+    // Carousel
     $('.center').slick({
         centerMode: true,
         slidesToShow: 1,
@@ -29,5 +30,5 @@ $(document).ready(function(){
           }
         ]
     });
-
+ 
 });

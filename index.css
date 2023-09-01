@@ -117,7 +117,51 @@ body {
     color: black;
 }
 
+/* Main Section */
+main {
+    width: 100%;
+    min-height: 80vh;
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding-bottom: 8%;
+}
 
+/* Carousel */
+.slick-slide {
+    width: 100%;
+    margin: 0 80px;
+}
+
+.slick-dots {
+    list-style-type: none;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.slick-dots li {
+    display: inline-block;
+}
+
+.slick-dots button {
+    display: inline-block;
+    font-size: 0px;
+    color: #ccc;
+    background-color: #ccc;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0;
+    margin-left: 6px;
+    margin-right: 6px;
+    outline: none;
+    cursor: pointer;
+}
+
+.slick-active button {
+    background-color: #aaa;
+}
 
 /* Footer */
 
