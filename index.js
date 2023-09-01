@@ -31,4 +31,49 @@ $(document).ready(function(){
         ]
     });
  
+    // Product Card Section
+    
+    $.get("https://5d76bf96515d1a0014085cf9.mockapi.io/product", function(response){
+        // console.log(response)
+        var productData = response;
+        // <div class="product" id="clothing">
+        //         <div class="product-card">
+        //             <a href="">
+        //                 <img class="product-img" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="">
+        //             </a>
+        //             <div class="product-details">
+        //                 <h4>Men Navy Blue Solid Sweatshirt</h4>
+        //                 <h5>United Colors of Benetton</h5>
+        //                 <p>Rs 2599</p>
+        //             </div>
+        //         </div>
+        //     </div>
+        for(let i = 0; i < productData.length; i++){
+            addProductCard(productData[i]);
+        }
+
+    })
+
+    function addProductCard(product){
+        var productDiv;
+        if(product.isAccessory){
+            productDiv = document.getElementById("accessory");
+        }else{
+            productDiv = document.getElementById("clothing");
+        }
+        // console.log(section);
+    
+        productDiv.innerHTML += `
+            <div class="product-card">
+                <a href="">
+                    <img class="product-img" src="${product.preview}" alt="">
+                </a>
+                <div class="product-details">
+                    <h4>${product.name}</h4>
+                    <h5>${product.brand}</h5>
+                    <p>Rs ${product.price}</p>
+                </div>
+            </div>
+        `;        
+    }
 });
