@@ -50,7 +50,7 @@ $(document).ready(function() {
 
         // productList.push(currentObj);
         // window.localStorage.setItem('product-list', JSON.stringify(productList));
-        console.log(productList);
+        // console.log(productList);
 
         var foundAtPos = -1;
         for(var i=0; i < productList.length; i++) {
@@ -62,12 +62,12 @@ $(document).ready(function() {
 
         if(foundAtPos > -1) {
             productList[foundAtPos].count = productList[foundAtPos].count + 1;
-            console.log(productList[foundAtPos].count);
+            // console.log(productList[foundAtPos].count);
             window.localStorage.setItem('product-list', JSON.stringify(productList));
         } else {
             currentObj.count = 1;
             productList.push(currentObj);
-            console.log(productList);
+            // console.log(productList);
             window.localStorage.setItem('product-list', JSON.stringify(productList));
         }
 

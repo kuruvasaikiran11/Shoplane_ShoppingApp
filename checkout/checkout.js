@@ -20,8 +20,8 @@ $(document).ready(function () {
         totalItems += productList[i].count
     }
 
-    // console.log(grandTotal);
-    total.innerText = totalItems;
+    // console.log(total);
+    $("#total").html(totalItems)
     $("#total-amt").html(grandTotal);
 
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
                     <h4>${product.name}</h4>
                     <p>x${product.count}</p>
                     <p><span>Amount: Rs </span><span class="product-price">${product.price}</span> </p>
-                    <button class="btn-remove">Remove</button>
+                    <button class="btn-remove" id="${product.id}">Remove</button>
                 </div>
             </div>
         `;
@@ -49,5 +49,24 @@ $(document).ready(function () {
             location.assign("../confirm.html");
         }
     });
+	
+	$(".btn-remove").click(function () {
+        var productId = $(this).attr('id'); // Get the product ID from data attribute
+        // console.log("Clicked")
+        removeItem(productId);
+    });
+    
+    function removeItem(id){
+        
+        for(let i = 0; i < productList.length; i++){
+            console.log("removed", id, productList[i].id)
+            if(productList[i].id === id){
+                productList.splice(i, 1);
+            }
+        }
+
+        localStorage.setItem("product-list", JSON.stringify(productList));
+        location.reload();
+    }
 
 });
