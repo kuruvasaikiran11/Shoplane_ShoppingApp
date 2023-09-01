@@ -65,7 +65,7 @@ $(document).ready(function(){
     
         productDiv.innerHTML += `
             <div class="product-card">
-                <a href="">
+                <a href="product/product.html?p=${product.id}">
                     <img class="product-img" src="${product.preview}" alt="">
                 </a>
                 <div class="product-details">
