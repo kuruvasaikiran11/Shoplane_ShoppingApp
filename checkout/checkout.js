@@ -45,6 +45,12 @@ $(document).ready(function () {
         if(totalItems == 0){
             alert("Your cart is empty!! Not able to place order");
         }else{
+            $.post('https://5d76bf96515d1a0014085cf9.mockapi.io/order', productList, function() {
+                alert('Order Placed Successfully')
+                // localStorage.setItem('product-list', []);
+
+                location.assign('../confirm.html');
+            })
             localStorage.setItem('product-list', JSON.stringify([])); // Set to an empty JSON array
             location.assign("../confirm.html");
         }
