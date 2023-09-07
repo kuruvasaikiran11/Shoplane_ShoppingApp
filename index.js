@@ -15,7 +15,7 @@ $(document).ready(function(){
             settings: {
               arrows: false,
               centerMode: true,
-              centerPadding: '40px',
+            //   centerPadding: '40px',
               slidesToShow: 3
             }
           },
@@ -24,7 +24,7 @@ $(document).ready(function(){
             settings: {
               arrows: false,
               centerMode: true,
-              centerPadding: '40px',
+            //   centerPadding: '10px',
               slidesToShow: 1
             }
           }
