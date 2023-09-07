@@ -117,6 +117,10 @@ body {
     color: black;
 }
 
+#menu-icon, #left-menu-list{
+    display: none;
+}
+
 /* Main Section */
 main {
     width: 100%;
@@ -264,3 +268,68 @@ footer > div:first-of-type {
     font-size: 14px;
     opacity: 0.8;
 }
+
+@media (max-width: 400px) {
+    #topbar {
+        padding: 16px 0;
+        justify-content: start;
+    }
+
+    #search-wrapper{
+        max-width: 250px;
+        margin: 0 10px;
+    }
+    /* Hide the navigation links */
+    #left-menu {
+      display: none;
+    }
+  
+    /* hamburger menu icon styles */
+    #menu-icon {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    #menu-icon:hover + #left-menu-list{
+        display: block;
+    }
+  
+    #left-menu-list {
+      /* display: block; */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      box-shadow: 0px 2px 5px #ccc;
+      z-index: 10;
+      width: 100%;
+    }
+  
+    #left-menu-list a {
+      display: block;
+      padding: 10px 16px;
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    #right-menu > i {
+        font-size: 20px;
+    }
+    .product-card {
+      max-width: 100%;
+      margin: 0 auto;
+      flex: 1 1 calc(100% - 20px); /* Adjust the width as needed */
+    }
+    footer{
+        flex-direction: column;
+    }
+
+    footer > div {
+        padding-left: 0px;
+    }
+  }
+  

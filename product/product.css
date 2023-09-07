@@ -113,3 +113,25 @@
     color: white;
     transition: transform 200ms;
 }
+
+@media (max-width : 400px){
+    .product-wrapper{
+        flex-direction: column;
+    }
+    #product-image{
+        width: 100%;
+        padding: 0;
+    }
+    #product-details{
+        width: 100%;
+    }
+    #product-title{
+        font-size: 30px;
+    }
+    #preview-images > img{
+        padding: 0;
+    }
+    #btn-add-to-cart{
+        padding: 10px 15px;
+    }
+}

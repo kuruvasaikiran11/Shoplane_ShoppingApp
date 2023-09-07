@@ -104,3 +104,24 @@
     font-weight: 600;
     color: white;
 }
+
+@media (max-width : 400px){
+    #content-wrapper{
+        flex-direction: column;
+    }
+    #item-list{
+        width: 100%;
+    }
+    #total-card {
+        width: 100%;
+    }
+    .item-card{
+        flex-direction: column;
+    }
+    .btn-remove{
+        margin-left: 0;
+    }
+    #btn-order{
+        padding: 15px 20px;
+    }
+}

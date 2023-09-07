@@ -13,4 +13,5 @@ $(document).ready(function() {
     }
 
     $('#cart-count').html(totalCount);
+
 })

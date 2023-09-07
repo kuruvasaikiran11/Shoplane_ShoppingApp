@@ -75,4 +75,28 @@ $(document).ready(function () {
         location.reload();
     }
 
+    // Humburger Navigation Links
+    if(window.innerWidth <= 400){
+        // JavaScript to handle menu toggle and navigation
+        const menuIcon = document.getElementById("menu-icon");
+        const leftMenuList = document.getElementById("left-menu-list");
+
+        // Add a click event listener to the menu icon
+        menuIcon.addEventListener("click", function () {
+            if (leftMenuList.style.display === "block") {
+                leftMenuList.style.display = "none";
+            } else {
+                leftMenuList.style.display = "block";
+            }
+        });
+
+        // Add click event listeners to each menu item to navigate
+        const menuItems = leftMenuList.querySelectorAll("a");
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener("click", function () {
+                leftMenuList.style.display = "none"; // Hide the menu
+                // You can add more logic here to navigate to the clicked URL
+            });
+        });
+    }
 });
