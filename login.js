@@ -23,6 +23,6 @@ $(document).ready(function(){
     $("#login-btn").click((e)=>{
         e.preventDefault();
         localStorage.setItem("flag", true);
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
     })
 })
