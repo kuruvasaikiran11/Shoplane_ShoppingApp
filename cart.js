@@ -14,4 +14,8 @@ $(document).ready(function() {
 
     $('#cart-count').html(totalCount);
 
+    $("#logout-btn").click(()=>{
+        localStorage.setItem('flag', false);
+        window.location.href = 'login.html';
+    })
 })

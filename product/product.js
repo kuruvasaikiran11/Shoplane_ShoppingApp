@@ -103,4 +103,8 @@ $(document).ready(function() {
             });
         });
     }
+    $("#logout-btn").click(()=>{
+        localStorage.setItem('flag', false);
+        window.location.href = '../login.html';
+    })
 });
