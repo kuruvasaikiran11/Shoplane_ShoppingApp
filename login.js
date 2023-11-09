@@ -15,9 +15,10 @@ function togglePass(){
 
 if(localStorage.getItem("flag") === "true"){
     window.location.href = 'index.html';
-}else{
-    alert("Please login")
 }
+// else{
+//     alert("Please login")
+// }
 
 $(document).ready(function(){
     const user = document.getElementById("user");
@@ -31,7 +32,7 @@ $(document).ready(function(){
 
         const enteredUser = user.value;
         const enteredPass = pass.value;
-        
+
         const isValidUser = users.some(([storedUser, storedPass]) => {
             return enteredUser === storedUser && enteredPass === storedPass;
         });
