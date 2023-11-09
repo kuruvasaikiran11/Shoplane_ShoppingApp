@@ -37,6 +37,7 @@ $(document).ready(function(){
                     alert(user.value+" User Successfully registered. Please Login and Happy Shoppin!!")
                     users.push([user.value, pass.value]);
                     localStorage.setItem("users", JSON.stringify(users));
+                    window.location.href = "login.html";
                 }            
             }
         }
