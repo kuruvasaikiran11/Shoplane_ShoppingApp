@@ -1,3 +1,7 @@
+if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
+    window.location.href = '/login.html';
+}
+
 $(document).ready(function () {
     var productListJSON = localStorage.getItem("product-list");
     var productList = [];
@@ -101,6 +105,7 @@ $(document).ready(function () {
     }
     $("#logout-btn").click(()=>{
         localStorage.setItem('flag', false);
-        window.location.href = '../login.html';
+        // window.location.href = '/login.html';
+        location.reload();
     })
 });

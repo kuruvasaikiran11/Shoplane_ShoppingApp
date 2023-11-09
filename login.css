@@ -49,6 +49,7 @@ main input[type="text"], main input[type="password"]{
     border: none;
     border-radius: 20%;
     padding: 8px 15px;
+    cursor: pointer;
 }
 
 #login-btn:hover, #register:hover{

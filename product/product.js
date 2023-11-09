@@ -3,6 +3,9 @@
 //     console.log(response);
 // });
 
+if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
+    window.location.href = '/login.html';
+}
 
 $(document).ready(function() {
     var productId = window.location.search.split('=')[1];
@@ -105,6 +108,7 @@ $(document).ready(function() {
     }
     $("#logout-btn").click(()=>{
         localStorage.setItem('flag', false);
-        window.location.href = '../login.html';
+        // window.location.href = '/login.html';
+        location.reload();
     })
 });

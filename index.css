@@ -129,6 +129,7 @@ body {
     color: white;
     padding: 5px 8px;
     border-radius: 70%;
+    cursor: pointer;
 }
 
 /* Main Section */
