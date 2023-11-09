@@ -1,3 +1,6 @@
+if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
+    window.location.href = '../login.html';
+}
 
 $(document).ready(function(){
     // Carousel
@@ -101,4 +104,10 @@ $(document).ready(function(){
             });
         });
     }
+
+    $("#logout-btn").click(()=>{
+        localStorage.setItem('flag', false);
+        window.location.href = '../login.html';
+    })
+    
 });

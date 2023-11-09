@@ -89,6 +89,7 @@ body {
 
 #right-menu > i {
     font-size: 30px;
+    
 }
 
 #cart-wrapper {
@@ -119,6 +120,15 @@ body {
 
 #menu-icon, #left-menu-list{
     display: none;
+}
+
+#logout-btn{
+    border: none;
+    margin-left: 49px;
+    background-color: brown;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 70%;
 }
 
 /* Main Section */
@@ -229,6 +239,7 @@ main {
     color: #009688;
 }
 
+
 /* Footer */
 
 footer {
@@ -333,3 +344,21 @@ footer > div:first-of-type {
     }
   }
   
+  @media(prefers-color-scheme: light){
+    body{
+    }
+  }
+
+  @media(prefers-color-scheme: dark){
+    body{
+        background-color: rgb(62, 58, 58);
+        color: white;
+    }
+    header{
+        background-color: #1c1b1e;
+        color: white;
+    }
+    #right-menu > i{
+        color : black;
+    }
+  }
