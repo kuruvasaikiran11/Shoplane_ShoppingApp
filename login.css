@@ -37,21 +37,21 @@ form div{
     margin-top: 2%;
 }
 
-input[type="text"], input[type="password"]{
+main input[type="text"], main input[type="password"]{
     width: 60%;
     border: none;
     border-radius: 30%;
     padding: 4px;
 }
 
-#login-btn{
+#login-btn, #register{
     margin-left: 10%;
     border: none;
     border-radius: 20%;
     padding: 8px 15px;
 }
 
-#login-btn:hover{
+#login-btn:hover, #register:hover{
     background-color: #1c1b1e;
     color: white;
     font-weight: bold;
