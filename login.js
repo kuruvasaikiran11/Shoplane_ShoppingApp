@@ -1,4 +1,4 @@
-const users = JSON.parse(localStorage.getItem("users"))
+const users = JSON.parse(localStorage.getItem("users")) ||[];
 
 if(!users){
     alert("Please Register before login");
@@ -28,6 +28,7 @@ $(document).ready(function(){
         e.preventDefault();
         if(users.length === 0){
             alert("User not found")
+            return
         }
         // localStorage.setItem("flag", true);
         // window.location.href = 'index.html';

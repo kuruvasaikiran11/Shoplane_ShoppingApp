@@ -1,5 +1,5 @@
 if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
-    window.location.href = 'login.html';
+    window.location.href = 'login.html';    
 }
 
 $(document).ready(function(){
