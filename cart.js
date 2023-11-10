@@ -1,18 +1,8 @@
 $(document).ready(function() {
     if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
-        // window.location.href = '/login.html';
-        var rootPath = window.location.pathname.split('/')[1];
-        var logoutLink = document.getElementById('logout-link');
-        
-        if (rootPath && rootPath !== 'Shoplane_ShoppingApp') {
-            // If not in the root directory, prepend the root path
-            logoutLink.href = '/' + rootPath + '/login.html';
-        } else {
-            // If in the root directory or no root path detected
-            logoutLink.href = '/login.html';
-        }
+        window.location.href = 'login.html';
     }
-    
+
     var productList = window.localStorage.getItem('product-list');
     if(productList === null || productList === ""){
         productList = [];

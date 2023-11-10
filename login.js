@@ -26,7 +26,9 @@ $(document).ready(function(){
     
     $("#login-btn").click((e)=>{
         e.preventDefault();
-        
+        if(users.length === 0){
+            alert("User not found")
+        }
         // localStorage.setItem("flag", true);
         // window.location.href = 'index.html';
 
