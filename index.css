@@ -346,8 +346,7 @@ footer > div:first-of-type {
   }
   
   @media(prefers-color-scheme: light){
-    body{
-    }
+    
   }
 
   @media(prefers-color-scheme: dark){
