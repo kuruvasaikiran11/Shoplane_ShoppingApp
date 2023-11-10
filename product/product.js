@@ -3,11 +3,26 @@
 //     console.log(response);
 // });
 
-if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
-    window.location.href = '/login.html';
-}
+// if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
+//     window.location.href = '/login.html';
+// }
 
 $(document).ready(function() {
+
+    if(localStorage.getItem("flag") === null || localStorage.getItem("flag") === "false"){
+        // window.location.href = '/login.html';
+        var rootPath = window.location.pathname.split('/')[1];
+        var logoutLink = document.getElementById('logout-link');
+        
+        if (rootPath && rootPath !== 'Shoplane_ShoppingApp') {
+            // If not in the root directory, prepend the root path
+            logoutLink.href = '/' + rootPath + '/login.html';
+        } else {
+            // If in the root directory or no root path detected
+            logoutLink.href = '/login.html';
+        }
+    }
+    
     var productId = window.location.search.split('=')[1];
     var currentObj = null;
 
